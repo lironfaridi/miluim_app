@@ -1,22 +1,23 @@
-# 🛡️ Operational Optimization & Workforce Management App
+# 🛡️ Tactical Resource Optimization & Platoon Management Engine
 
-A full-stack web application built to solve real-world resource allocation constraints in active military reserve units.
+*Developed by Liron Faridi | Data Analyst*
 
 ## 🎯 The Challenge
-Managing leave schedules while ensuring strict operational minimums (e.g., minimum commanders, drivers, and medics) using static Excel sheets led to errors and blind spots.
+During active reserve duty, managing the leave schedules of a combat company (comprising multiple specialized platoons) is a highly complex resource-allocation problem. Relying on static Excel sheets created critical blind spots, risking operational readiness by accidentally allowing too many essential personnel (e.g., Medics, APC Drivers, Commanders) to be off-base simultaneously.
 
 ## 💡 The Solution
-A dynamic, data-driven logic engine that actively blocks conflicting requests and provides real-time visibility through interactive dashboards.
-
-## 🛠️ Tech Stack
-* **Frontend:** Streamlit, Plotly (Gantt Charts & Visualizations)
-* **Backend:** Python, SQLAlchemy (Logic Engine)
-* **Database:** SQLite
-* **Deployment:** Streamlit Community Cloud
+I developed a full-stack, data-driven web application that transitions workforce management from manual spreadsheets to an automated constraint-satisfaction engine. The system actively monitors real-time staffing levels and automatically blocks leave requests that would violate the unit's minimum operational requirements.
 
 ## 🚀 Key Features
-1. **Dynamic Constraint Engine:** Prevents leave scheduling if it violates platoon-specific minimums.
-2. **Real-Time Dashboards:** KPIs and Gantt charts for full visibility.
-3. **Role Management:** Independent configuration per unit.
+* **Dynamic Logic Engine:** Automatically prevents scheduling conflicts based on customizable minimum-role constraints.
+* **Real-Time KPIs & Gantt Visualization:** Instant overview of active personnel, soldiers on leave, and overall readiness status using interactive Plotly charts.
+* **Multi-Unit Scalability:** Independent database configurations for different operational platoons.
 
-[👉 Click here to view the live app] (שים פה את הקישור שלך)
+## 🛠️ Tech Stack
+* **Frontend:** Streamlit, Plotly (Data Visualization)
+* **Backend & Logic:** Python
+* **Database & ORM:** SQLite, SQLAlchemy
+* **Deployment:** Streamlit Community Cloud
+
+---
+[👉 Click here to view the live web app] (שים כאן את הקישור ל-Streamlit)
