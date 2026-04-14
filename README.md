@@ -20,4 +20,4 @@ I developed a full-stack, data-driven web application that transitions workforce
 * **Deployment:** Streamlit Community Cloud
 
 ---
-[👉 Click here to view the live web app] (שים כאן את הקישור ל-Streamlit)
+[👉 Click here to view the live web app](https://miluimapp-dtomlbzsprazvfypctrjnm.streamlit.app/)
