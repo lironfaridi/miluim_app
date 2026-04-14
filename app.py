@@ -13,11 +13,9 @@ st.set_page_config(page_title="מערכת אופטימיזציה פלוגתית"
 Session = sessionmaker(bind=engine)
 session = Session()
 
-
 # פונקציות עזר
 def get_all_roles():
     return session.query(Role).all()
-
 
 # --- סרגל צד (Sidebar) ---
 with st.sidebar:
@@ -118,6 +116,18 @@ with tab1:
 
             st.download_button("📥 ייצוא לדו\"ח אקסל", buffer.getvalue(),
                                file_name=f"report_{selected_platoon}.xlsx", type="secondary")
+
+            # --- הוספת מנגנון המחיקה שהושמט ---
+            st.markdown("<br>", unsafe_allow_html=True)
+            with st.expander("🗑️ ניהול ומחיקת רשומות קיימות"):
+                for l in leaves:
+                    c1, c2 = st.columns([4, 1])
+                    c1.markdown(f"**{l.soldier.name}** | {l.start_date.strftime('%d/%m')} עד {l.end_date.strftime('%d/%m')}")
+                    if c2.button("מחק", key=f"del_{l.id}"):
+                        session.delete(l)
+                        session.commit()
+                        st.rerun()
+            # -----------------------------------
         else:
             st.info("אין נתונים להצגה על ציר הזמן.")
 
